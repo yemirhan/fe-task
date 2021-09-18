@@ -1,4 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux';
+import coffees from "../db/coffees.json"
+import { $fetch_data } from '../redux/coffee.reducer';
 
 interface CoffeeContextState {
     darkMode: boolean,
@@ -21,8 +24,11 @@ export const CoffeeContext = createContext<CoffeeContextState>(
 export const CoffeeProvider: React.FC = ({ children }) => {
     const [darkMode, setDarkMode] = useState(false)
     const [loading, setLoading] = useState(true)
+    const dispatch = useDispatch()
     useEffect(() => {
+        dispatch($fetch_data(coffees))
         setLoading(false)
+
         return () => {
             setLoading(true)
         }

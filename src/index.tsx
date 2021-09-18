@@ -9,11 +9,11 @@ import { CoffeeProvider } from './providers/CoffeeProvider';
 
 ReactDOM.render(
   <React.StrictMode>
-    <CoffeeProvider>
-      <Provider store={store}>
+    <Provider store={store}>
+      <CoffeeProvider>
         <App />
-      </Provider>
-    </CoffeeProvider>
+      </CoffeeProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

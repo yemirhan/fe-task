@@ -1,4 +1,4 @@
-interface onChangeProps {
+export interface onChangeProps {
     target: {
         value: any
     }

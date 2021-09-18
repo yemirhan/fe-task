@@ -1,11 +1,11 @@
 import React from 'react'
-import { InputProps } from '../@types/InputProps'
+import { InputProps, onChangeProps } from '../@types/InputProps'
 
 export const Input: React.FC<InputProps> = ({ defaultValue = "", value = "", onChange, placeholder = "", ...props }) => {
     return (
         <input
             value={value}
-            onChange={onChange}
+            onChange={({ target: { value } }: onChangeProps) => onChange(value)}
             placeholder={placeholder}
             {...props}
             type="text"
