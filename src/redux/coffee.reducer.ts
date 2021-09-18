@@ -26,7 +26,7 @@ interface action {
 const reducer = (state = initialState, { type, payload }: action): state => {
     switch (type) {
         case "FETCH_DATA":
-            return { ...state, data: payload, categories: [... new Set((payload || []).map((coffee:Entry) => coffee.category))] }
+            return { ...state, data: payload, categories: [...new Set((payload || []).map((coffee:Entry) => coffee.category))] }
         case "SEARCH":
             return { ...state, search: payload }
 
