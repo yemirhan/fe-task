@@ -1,3 +1,6 @@
 import { createStore, combineReducers } from 'redux'
 import $coffee from './coffee.reducer'
-export default createStore(combineReducers({ $coffee }))
+const reducers = combineReducers({ $coffee })
+export default createStore(reducers)
+
+export type AppState = ReturnType<typeof reducers>;
