@@ -1,9 +1,12 @@
 import React from 'react';
 import './App.css';
+import CoffeeBook from './containers/CoffeeBook';
 
 const App: React.FC = () => {
   return (
-    <div className="w-full h-10 bg-gray-200">test</div>
+    <div className="container mx-auto">
+      <CoffeeBook />
+    </div>
   );
 }
 
