@@ -10,7 +10,7 @@ const App: React.FC = () => {
     <LoadingSpinner />
   </div>
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto font-body">
       <CoffeeBook />
     </div>
   );

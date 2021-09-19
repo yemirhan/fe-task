@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
+
+@font-face {
+    font-family: Exo-Bold;
+    src: url("./fonts//exo-bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Roboto Regular";
+    src: url("./fonts//roboto-regular.woff2") format("woff2");
+}
 @tailwind utilities;

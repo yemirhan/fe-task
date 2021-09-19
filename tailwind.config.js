@@ -8,6 +8,10 @@ module.exports = {
         extend: {
             colors: {
                 lightBlue: colors.lightBlue
+            },
+            fontFamily: {
+                'body': ['Robota Regular', 'Helvetica', 'sans-serif'],
+                'sans': ['Exo-Bold', 'Helvetica', 'sans-serif']
             }
         },
     },
