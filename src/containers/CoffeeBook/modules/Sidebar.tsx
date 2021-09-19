@@ -10,7 +10,7 @@ export const Sidebar: React.FC = () => {
 
     const dispatch = useDispatch()
     return (
-        <aside className="col-span-4 border-r border-gray-300 py-8 ">
+        <aside className="col-span-4 border-b md:border-r md:border-b-0 border-gray-300 pt-8 pb-2 h-auto md:h-screen sticky top-0 left-0 bg-white">
             <SearchBar value={$coffee?.search || ""} onChange={(srch) => dispatch($set_search(srch))} placeholder="Search" />
             <div className="flex flex-col space-y-2 mt-4 px-2"><Button onClick={() => dispatch($set_filter(""))}>All Coffees</Button>
                 {$coffee.categories.map(category => <Button onClick={() => dispatch($set_filter(category))}>{category}</Button>)}</div>

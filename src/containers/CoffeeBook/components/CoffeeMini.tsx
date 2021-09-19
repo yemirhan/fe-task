@@ -7,7 +7,6 @@ const CoffeeArticle = styled.article`
     height: auto;
     border-bottom: 1px solid rgb(229, 231, 235);
     padding: 12px;
-    margin: 12px;
     &:not(&:last-child) {
         margin-bottom: 8px !important;
     }
