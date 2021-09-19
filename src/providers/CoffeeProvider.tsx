@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
-import CoffeeBook from '../containers/CoffeeBook';
 import coffees from "../db/coffees.json"
 import { $fetch_data } from '../redux/coffee.reducer';
 

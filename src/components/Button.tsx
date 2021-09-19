@@ -1,9 +1,14 @@
 import React from 'react'
 
-export const Button: React.FC = () => {
-    return (
-        <div>
+interface ButtonProps {
+    children: any,
+    onClick: () => void
+}
 
-        </div>
+export const Button: React.FC<ButtonProps> = ({ children, onClick = () => { } }) => {
+    return (
+        <button onClick={onClick} className="w-full px-4 py-2 bg-gray-100 hover:bg-gray-300 transition-colors rounded-lg">
+            {children}
+        </button>
     )
 }

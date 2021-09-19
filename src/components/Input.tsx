@@ -1,6 +1,11 @@
 import React from 'react'
 import { InputProps, onChangeProps } from '../@types/InputProps'
 
+/**
+ * 
+ * @param defaultValue: 
+ * @returns 
+ */
 export const Input: React.FC<InputProps> = ({ defaultValue = "", value = "", onChange, placeholder = "", ...props }) => {
     return (
         <input
