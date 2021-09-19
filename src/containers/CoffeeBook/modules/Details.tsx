@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { CoffeeMini } from '../components/CoffeeMini'
 
 export const Details: React.FC = () => {
     const $coffee = useSelector(state => state.$coffee)
@@ -8,7 +9,7 @@ export const Details: React.FC = () => {
             {$coffee.data
             .filter(coffee => coffee.category.includes($coffee.filter))
             .filter(coffee => (coffee.title + " "+ coffee.description).includes($coffee.search))
-            .map(coffee => coffee.title)}
+            .map(coffee => <CoffeeMini coffee={coffee} />)}
         </main>
     )
 }

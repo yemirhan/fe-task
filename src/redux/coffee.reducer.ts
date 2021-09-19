@@ -1,4 +1,4 @@
-interface Entry {
+export interface Entry {
     title: String,
     description: String,
     ingredients: Array<String>,
