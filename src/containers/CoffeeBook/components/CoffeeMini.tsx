@@ -1,11 +1,23 @@
 import React from 'react'
 import { Entry } from '../../../redux/coffee.reducer'
+import styled from 'styled-components'
+
+const CoffeeArticle = styled.article`
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid rgb(229, 231, 235);
+    padding: 12px;
+    margin: 12px;
+    &:not(&:last-child) {
+        margin-bottom: 8px !important;
+    }
+`
 
 export const CoffeeMini: React.FC<{ coffee: Entry }> = ({ coffee: { category, description, id, ingredients, title }, children }) => {
     return (
-        <article className="w-full h-auto border-b border-gray-200 p-3 m-3">
-            <h5 className="font-semibold text-xl mb-2">{title}</h5>
-            <p className="mb-2">{description}</p>
+        <CoffeeArticle>
+            <h5 className="font-semibold text-xl">{title}</h5>
+            <p>{description}</p>
             <ul className="flex flex-row space-x-2 text-gray-600 text-sm">
                 <li>Ingredients:</li>
                 {
@@ -17,6 +29,6 @@ export const CoffeeMini: React.FC<{ coffee: Entry }> = ({ coffee: { category, de
                         )
                 }
             </ul>
-        </article>
+        </CoffeeArticle>
     )
 }
