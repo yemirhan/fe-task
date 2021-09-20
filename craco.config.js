@@ -1,10 +1,8 @@
+/* eslint-disable */
+const postcss = require('./postcss.config');
+
 module.exports = {
-    style: {
-      postcss: {
-        plugins: [
-          require('tailwindcss'),
-          require('autoprefixer'),
-        ],
-      },
-    },
+  style: {
+    postcss
   }
+};

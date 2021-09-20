@@ -7,7 +7,7 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                lightBlue: colors.lightBlue
+                lightBlue: colors.sky
             },
             fontFamily: {
                 'body': ['Robota Regular', 'Helvetica', 'sans-serif'],
