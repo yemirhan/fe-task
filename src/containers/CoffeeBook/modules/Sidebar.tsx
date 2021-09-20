@@ -22,6 +22,8 @@ export const Sidebar: React.FC = () => {
                         <Button
                             selected={$coffee.filter === category}
                             onClick={() => dispatch($set_filter(category))}
+                            name={category}
+                            key={`button_${category}`}
                         >
                             {category}
                         </Button>

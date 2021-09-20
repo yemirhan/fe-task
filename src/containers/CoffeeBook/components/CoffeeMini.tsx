@@ -14,7 +14,7 @@ const CoffeeArticle = styled.article`
 
 export const CoffeeMini: React.FC<{ coffee: Entry }> = ({ coffee: { category, description, id, ingredients, title }, children }) => {
     return (
-        <CoffeeArticle>
+        <CoffeeArticle aria-label="coffee_entry">
             <h5 className="font-semibold text-2xl font-sans">{title}</h5>
             <p>{description}</p>
             <ul className="flex flex-row space-x-2 text-gray-600 text-sm">

@@ -7,9 +7,9 @@ export const Details: React.FC = () => {
     return (
         <main className="col-span-8">
             {$coffee.data
-            .filter(coffee => coffee.category.includes($coffee.filter))
-            .filter(coffee => (coffee.title + " "+ coffee.description).includes($coffee.search))
-            .map(coffee => <CoffeeMini coffee={coffee} />)}
+                .filter(coffee => coffee.category.includes($coffee.filter))
+                .filter(coffee => (coffee.title + " " + coffee.description).includes($coffee.search))
+                .map(coffee => <CoffeeMini key={`coffee_${coffee.id}`} coffee={coffee} />)}
         </main>
     )
 }

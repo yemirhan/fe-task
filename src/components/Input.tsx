@@ -9,6 +9,7 @@ export const Input: React.FC<InputProps> = ({ defaultValue = "", value = "", onC
             placeholder={placeholder}
             {...props}
             type="text"
+            aria-label="search_input"
             className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-200 focus:outline-none transition-all"
         />
     )

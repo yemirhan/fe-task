@@ -5,8 +5,8 @@ export interface onChangeProps {
 }
 export interface InputProps {
     defaultValue?: string | number,
-    value: string | number,
+    value?: string | number,
     onChange: ({ target: { value } }: onChangeProps) => void,
     props?: any | null,
-    placeholder: string
+    placeholder?: string
 }
