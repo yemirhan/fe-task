@@ -32,15 +32,16 @@ test('renders entries with black in it', () => {
             .filter(coffee => coffee.category.includes(""))
             .filter(coffee => (coffee.title + " " + coffee.description).includes("black")).length
     expect(entries.length).toBe(list)
+    fireEvent.change(screen.getByLabelText(/search_input/i), { target: { value: '' } })
 });
-test('render every coffee that is iced', () => {
+
+test('render every coffee that is iced', async () => {
     render(
         <App />
     );
-    fireEvent(screen.getByRole("button", { name: "iced" }), new MouseEvent("click", {}))
-    const entries = screen.queryAllByLabelText("coffee_entry")
-    console.log(entries);
-    
+    await fireEvent(screen.getByRole("button", { name: "iced" }), new MouseEvent("click", { bubbles: true }))
+    const entries = screen.getAllByLabelText("coffee_entry")
+
     const list =
         coffees
             .filter(coffee => coffee.category.includes("iced")).length
